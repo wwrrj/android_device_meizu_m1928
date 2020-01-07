@@ -10,7 +10,7 @@
 DEVICE_PATH := device/meizu/m1928
 
 # Assertion
-TARGET_OTA_ASSERT_DEVICE := m1928,meizu_16T_CN
+TARGET_OTA_ASSERT_DEVICE := m1928,meizu16T
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth/include
