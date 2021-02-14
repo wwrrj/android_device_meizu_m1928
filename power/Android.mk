@@ -44,7 +44,7 @@ LOCAL_SHARED_LIBRARIES := \
     libhwbinder \
     libutils \
     android.hardware.power@1.2 \
-    vendor.mokee.power@1.0
+    vendor.lineage.power@1.0
 
 LOCAL_HEADER_LIBRARIES := \
     libhardware_headers
