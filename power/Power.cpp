@@ -104,8 +104,8 @@ Return<void> Power::powerHintAsync_1_2(PowerHint_1_2 hint, int32_t data) {
     return powerHint(static_cast<PowerHint_1_0>(hint), data);
 }
 
-Return<int32_t> Power::getFeature(MoKeeFeature feature) {
-    if (feature == MoKeeFeature::SUPPORTED_PROFILES) {
+Return<int32_t> Power::getFeature(LineageFeature feature) {
+    if (feature == LineageFeature::SUPPORTED_PROFILES) {
         return get_number_of_profiles();
     }
     return -1;
@@ -122,12 +122,12 @@ status_t Power::registerAsSystemService() {
         ALOGI("Successfully registered IPower");
     }
 
-    ret = IMoKeePower::registerAsService();
+    ret = ILineagePower::registerAsService();
     if (ret != 0) {
-        ALOGE("Failed to register IMoKeePower (%d)", ret);
+        ALOGE("Failed to register ILineagePower (%d)", ret);
         goto fail;
     } else {
-        ALOGI("Successfully registered IMoKeePower");
+        ALOGI("Successfully registered ILineagePower");
     }
 
 fail:
